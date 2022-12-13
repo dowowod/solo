@@ -13,7 +13,15 @@ driver.get(url= URL)
 driver.implicitly_wait(time_to_wait=10)
 
 elem = driver.find_element(By.TAG_NAME, "body")
-a= 0
+a=0
+b = input('검색을 하시겠습니까?(y/n)')
+if b == 'y' :
+    try :
+        driver.find_element(By.CSS_SELECTOR,'#__next > div.PJLV.undefined.wpds-c-mWFaJ > nav > div.wpds-c-kKPYWe.wpds-c-kKPYWe-cIACJd-variant-leftSide > div > button').click()
+        driver.find_element(By.CSS_SELECTOR,'')
+    except :
+        pass
+
 for i in range(5):
     elem.send_keys(Keys.PAGE_DOWN)
     time.sleep(0.1)
